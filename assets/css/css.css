@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+}
+
+.btn {
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+    gap:7px;
+    margin-inline: auto;
+    font-family: 'Handjet', cursive;
+}
+button{
+    font-size:50px;
+    color:lightgoldenrodyellow;
+    background-color: darkslategray;
+    border-color:grey;
+    border-style: outset;
+    border-radius: 30px;
+}
+.baslik{
+    font-size: 70px;
+    text-align: center;
+    margin-top:50px;
+    font-family: 'Handjet', cursive;
+    color:lightgoldenrodyellow;
+}
+.kazananstyle{
+    text-align: center;
+    margin-top:35px;
+    font-size:60px;
+    font-family: 'Handjet', cursive;
+    color:lightgoldenrodyellow;
+
+}
+.skor{
+    color:lightgoldenrodyellow;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Handjet', cursive;
+    gap:15px;
+    margin-bottom:35px;
+    margin-top:30px;
+
+}
+#reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:darkslategray;
+    width: 200px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-inline: auto;
+    font-family: 'Handjet', cursive;
+    }
+ .memorybtns{
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,100px);
+    gap:5px;
+    margin-inline: auto;
+    font-family: 'Handjet', cursive;
+ }
+
+ .memorybtns button{
+    color:transparent;
+    background-color:antiquewhite;
+    border-radius: 30px;
+    border-color:white;
+    
+ }
+ .memorybtns button.visible, .memorybtns button.matched {
+    color:inherit;
+ }
+ 
+ .hamle{
+    font-size:40px;
+    margin-bottom: 20px;
+    color:lightpink;
+    margin-top:20px;
+ }
+ .baslikcolor{
+    color:crimson;
+ }
+ .durum{
+
+    text-align: center;
+    font-size:35px;
+    font-family: 'Handjet', cursive;
+    color:pink;
+    margin-top:20px;
+    margin-bottom: 10px;
+ }
+ .link{
+    color:lightgoldenrodyellow;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left:20px;
+    border:1px solid lightgoldenrodyellow;
+    margin-top: 50px;
+    border-radius:12px;
+    
+    
+ }
+ .sil{
+   padding:12px;
+   font-size:20px;
+   border-radius: 16px;
+   background-color: pink;
+   border-color:lightcoral;
+   color:crimson;
+   
+ }
+ .silKonum{
+   text-align: center;
+   margin-top:20px;
+   margin-bottom:20px;
+   border-color:pink;
+   
+ }
