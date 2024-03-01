@@ -1,45 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/css.css">
+    <link rel="stylesheet" href="assets/css/css.css" />
     <script src="assets/js/xox.js" defer></script>
     <title>XOX OYUNU</title>
     <style>
-        body {
-            background-color: #1A2A33;
-        }
+      body {
+        background-color: #1a2a33;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <a class="link" href="memory.html">Memory Oyunu</a>
-    <h1 class="baslik">XOX!</h1>
-    <div class="skor">
-        <h3> X: <span id="x"></span></h3>
-        <div>||</div>
-        <h3>O: <span id="o"></span></h3>
+  <body>
+    <div class="container2">
+      <a class="font" href="memory.html">TURN</a>
     </div>
-    <div class="btn" id="btns">
-        <button class="btncls"></button>
-        <button class="btncls"></button>
-        <button class="btncls"></button>
-        <button class="btncls"></button>
-        <button class="btncls"></button>
-        <button class="btncls"></button>
-        <button class="btncls"></button>
-        <button class="btncls"></button>
-        <button class="btncls"></button>
+    <div class="drop-filter hidden">
+      <div class="winner-side">
+        <div class="show-winner">
+          <img class="winner" src="assets/img/o.svg" alt="" />
+          <h4>TAKES THE ROUND</h4>
+        </div>
+        <div class="options">
+          <span class="quit">QUİT</span>
+          <span class="next return">NEXT ROUND</span>
+        </div>
+      </div>
     </div>
 
-    <h1 class="kazananstyle">Winner: <span id="kazanan"></span></h1>
-    <div class="ortala"><button id="reset">Again</button></div>
-
-</body>
-
+    <div class="drop-filter-2 drop-filter hidden">
+      <div class="winner-side">
+        <h4>RESTART GAME?</h4>
+        <div class="options">
+          <span id="cancel" class="quit">NO, CANCEL</span>
+          <span class="next reset">YES, RESTART</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="all">
+        <div class="helpers-menu">
+          <div>
+            <img class="litte-img" src="assets/img/x.svg" alt="" />
+            <img class="litte-img" src="assets/img/o.svg" alt="" />
+          </div>
+          <div class="your-turn">
+            <img class="turn" src="assets/img/xturn.svg" alt="" />
+            <h6>TURN</h6>
+          </div>
+          <img class="return-img" src="assets/img/return.svg" alt="" />
+        </div>
+        <div class="buttons">
+          <button class="btncls"></button>
+          <button class="btncls"></button>
+          <button class="btncls"></button>
+          <button class="btncls"></button>
+          <button class="btncls"></button>
+          <button class="btncls"></button>
+          <button class="btncls"></button>
+          <button class="btncls"></button>
+          <button class="btncls"></button>
+        </div>
+        <div class="helpers-menu">
+          <div class="score-x info-block">
+            <h5>X</h5>
+            <h3 id="x">0</h3>
+          </div>
+          <div class="ties info-block">
+            <h5>TIES</h5>
+            <h3 id="tie">0</h3>
+          </div>
+          <div class="score-o info-block">
+            <h5>O</h5>
+            <h3 id="o">0</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -3,80 +3,372 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
+  background-color: #1a2a33;
+}
+.container {
+  margin-inline: 30px;
+  margin-top: 40px;
 }
 
-.btn {
-  width: 300px;
+.buttons {
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
-  gap: 10px;
-
-  margin-inline: auto;
-  font-family: "Handjet", cursive;
+  column-gap: 20px;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 25px;
+  font-family: 'Handjet', cursive;
 }
-button {
+
+.x-class {
+  background-image: url('../img/x.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+  color: transparent;
+}
+.o-class {
+  background-image: url('../img/o.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+  color: transparent;
+}
+
+.x-hover {
+  background-image: url('../img/xhover.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+}
+
+.o-hover {
+  background-image: url('../img/ohover.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+}
+
+.buttons button {
   font-size: 50px;
   width: 100px;
   height: 100px;
-  color: #31c3bd;
   background-color: #1f3641;
   border-color: transparent;
   border-radius: 12px;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
-.baslik {
-  font-size: 70px;
-  text-align: center;
-  margin-top: 50px;
-  font-family: "Handjet", cursive;
-  color: lightgoldenrodyellow;
+
+.return {
+  cursor: pointer;
 }
-.kazananstyle {
-  text-align: center;
-  margin-top: 35px;
-  font-size: 60px;
-  font-family: "Handjet", cursive;
-  color: lightgoldenrodyellow;
+
+.all {
+  max-width: 340px;
+  margin: auto;
 }
-.skor {
-  color: lightgoldenrodyellow;
-  font-size: 50px;
-  text-align: center;
+
+.little-img img {
+  height: 32px;
+  width: 32px;
+}
+
+.your-turn {
   display: flex;
-  justify-content: center;
-  font-family: "Handjet", cursive;
-  gap: 15px;
-  margin-bottom: 35px;
-  margin-top: 30px;
-}
-#reset {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: darkslategray;
-  width: 200px;
-  margin-top: 25px;
-  margin-bottom: 20px;
-  margin-inline: auto;
-  font-family: "Handjet", cursive;
+  justify-content: center;
+  gap: 12px;
+  background-color: #1f3641;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 10px 20px;
+
+  & h6 {
+    font-size: 16px;
+    line-height: 20.16px;
+    color: #a8bfc9;
+    letter-spacing: 1px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+  }
 }
+
+.helpers-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.score-x {
+  background-color: #31c3bd;
+}
+
+.ties {
+  background-color: #a8bfc9;
+}
+
+.score-o {
+  background-color: #f2b137;
+}
+
+.font {
+  font-size: 16px;
+  line-height: 20.16px;
+  color: #a8bfc9;
+  letter-spacing: 1px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  padding-inline: 12px;
+  padding-block: 6px;
+  text-decoration: none;
+  border: 2px solid #f2b137;
+  border-radius: 12px;
+}
+
+.info-block {
+  margin-top: 30px;
+  padding-inline: 37px;
+  padding-block: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #1a2a33;
+  font-family: Outfit;
+  & h5 {
+    font-size: 13, 28px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.875px;
+    text-align: center;
+  }
+  & h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.winner-side {
+  background-color: #1f3641;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding-block: 35px;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+}
+
+.drop-filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.show-winner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #f2b137;
+  & img {
+    width: 64px;
+    height: 64px;
+  }
+  & h4 {
+    font-family: Outfit;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 2.5px;
+  }
+}
+
+.drop-filter-2 {
+  color: #a8bfc9;
+  font-family: Outfit;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 2.5px;
+  text-align: center;
+}
+
+.options {
+  font-family: Outfit;
+  font-size: 16px;
+  color: #1a2a33;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+
+  & .quit {
+    background-color: #a8bfc9;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 0px #6b8997;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  & .next {
+    background-color: #f2b137;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 0px #cc8b13;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffc860;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .buttons {
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+  .winner-side {
+    gap: 35px;
+  }
+
+  .show-winner {
+    & img {
+      width: 30px;
+      height: 30px;
+    }
+    & h4 {
+      font-family: Outfit;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  .drop-filter-2 {
+    font-family: Outfit;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .options {
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .buttons {
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+  .buttons button {
+    width: 90px;
+    height: 90px;
+  }
+
+  .all {
+    width: 300px;
+  }
+}
+
+.all-memory {
+  max-width: 450px;
+  margin: auto;
+  margin-bottom: 35px;
+}
+
+.helpers-memory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.info-memory {
+  margin-top: 30px;
+  padding-inline: 30px;
+  padding-block: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-family: 'Paytone One';
+
+  & h5 {
+    font-size: 13, 28px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.875px;
+    text-align: center;
+  }
+  & h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+  }
+}
+
+.moves {
+  background-color: #1f3641;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.5);
+  color: #f2b137;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.best {
+  background-color: #f2b137;
+  margin: 0;
+  box-shadow: 0px 5px 0px #cc8b13;
+  text-transform: uppercase;
+  color: #1a2a33;
+}
+
 .memorybtns {
-  width: 400px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 100px);
-  gap: 5px;
-  margin-inline: auto;
-  font-family: "Handjet", cursive;
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 25px;
+  margin: auto;
 }
 
 .memorybtns button {
   color: transparent;
-  background-color: antiquewhite;
-  border-radius: 30px;
-  border-color: white;
+  min-width: 80px;
+  min-height: 80px;
+  background-color: #1f3641;
+  border-color: transparent;
+  border-radius: 12px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 50px;
 }
 .memorybtns button.visible,
 .memorybtns button.matched {
@@ -90,36 +382,113 @@ button {
   margin-top: 20px;
 }
 .baslikcolor {
-  color: crimson;
-}
-.durum {
+  margin-bottom: 40px;
+  font-family: 'Paytone One';
+  color: #202020;
+  text-transform: uppercase;
+  letter-spacing: -2px;
   text-align: center;
-  font-size: 35px;
-  font-family: "Handjet", cursive;
-  color: pink;
-  margin-top: 20px;
-  margin-bottom: 10px;
+
+  & span {
+    display: block;
+    margin: 11px 0 17px 0;
+    font-size: 50px;
+    line-height: 80px;
+    color: #f2b137;
+    text-shadow: 0 13.36px 8.896px rgba(0, 0, 0, 0.5), 0 -2px 1px black;
+    letter-spacing: -4px;
+  }
 }
+
 .link {
-  color: lightgoldenrodyellow;
+  padding-inline: 12px;
+  padding-block: 6px;
   text-decoration: none;
-  font-size: 20px;
-  margin-left: 20px;
-  border: 1px solid lightgoldenrodyellow;
-  margin-top: 50px;
+  font-family: 'Paytone One';
+  border: 2px solid #f2b137;
   border-radius: 12px;
+  font-size: 16px;
+  line-height: 20.16px;
+  color: #a8bfc9;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
-.sil {
-  padding: 12px;
+
+.container2 {
+  margin-top: 35px;
+  margin-left: 15px;
+}
+
+.new-recor {
+  background-color: #f2b137;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 35px;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  color: #202020;
+  font-size: 50px;
+  font-family: 'Paytone One';
+}
+
+.back-game {
+  background-color: #a8bfc9;
+  padding-inline: 18px;
+  padding-block: 9px;
   font-size: 20px;
-  border-radius: 16px;
-  background-color: pink;
-  border-color: lightcoral;
-  color: crimson;
+  font-family: 'Paytone One';
+  border-radius: 12px;
+  border-style: none;
+  box-shadow: 0px 5px 0px #6b8997;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 2px 0px #6b8997;
+  }
 }
-.silKonum {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-color: pink;
+
+.sil {
+  cursor: pointer;
+}
+.animation {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 900px;
+  z-index: 45;
+}
+
+@media only screen and (max-width: 600px) {
+  .memorybtns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+    margin: auto;
+  }
+  .memorybtns button {
+    color: transparent;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: #1f3641;
+    border-color: transparent;
+    border-radius: 12px;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 50px;
+  }
+  .baslikcolor {
+    & span {
+      font-size: 50px;
+      line-height: 40px;
+    }
+  }
+
+  .info-memory {
+    padding-inline: 10px;
+  }
 }
